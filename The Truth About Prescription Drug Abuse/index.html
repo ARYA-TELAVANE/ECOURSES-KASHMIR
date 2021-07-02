@@ -14,7 +14,10 @@
        
        img {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
+        } iframe{
+        width: 100%;
+        border: 2px solid #ccc;
+    }
    </style>
 
 </head>
@@ -35,9 +38,9 @@
               
                 <div class=" header-menu col-md-8">
                     <!--<div class="demo-content bg-alt"><iframe width="850" height="450"src="https://www.youtube.com/embed/Wa2rnINf_tg" style="padding-left:0;padding-right:0;width:100%;"></iframe></div>
-                --><video width="850" height="450" id="myVideo"style="padding-left:0;padding-right:0;width:100%;" autoplay loop controls>
-                            <source src="./videos/antidrug-commercial-heroin-best-high_en.mp4" type="video/mp4">
-                        </video>
+                <video width="850" height="450" id="myVideo"style="padding-left:0;padding-right:0;width:100%;" autoplay loop controls>-->
+                            <iframe width="900" height="450" id="myIframe" src="https://www.youtube.com/embed/_O48eaZVEVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
                 </div>
         </div>
         
@@ -54,6 +57,12 @@
             function playVid() { 
                 vid.play(); 
             } 
+            // Selecting the iframe element
+    var iframe = document.getElementById("myIframe");
+    
+    // Adjusting the iframe height onload event
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
         </script>
     </body>
 </html>
